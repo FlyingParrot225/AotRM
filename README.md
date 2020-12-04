@@ -84,7 +84,7 @@ ___
 ## Details
 These commands are for people that wish to edit in-game values using the dev-console in the browser. If you have no experience with javascript, I would not suggest you use this as it can mess with the code of the game. Here is a list of commands for you to use in the console if you wish.
 > ### Dev Note
-> Despite being a game developer, I dont mind people modding or hacking my game, as long as it doesnt affect other people. If this game were ever to become an online game, then I would be against console commands. However since it is offline, the only thing you can edit is your own game. So I decided to give you a table of commands for you to do this so that you wouldn't waste time reading the source code.
+> Despite being a game developer, I dont mind people modding my game, as long as it doesnt affect other people. If this game were ever to become an online game, then I would be against console commands. However since it is offline, the only thing you can edit is your own game. So I decided to give you a table of commands for you to do this so that you wouldn't waste time reading the source code.
 ## Table of Commands
 | Command | Description |
 | --- | --- |
