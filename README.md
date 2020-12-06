@@ -6,6 +6,7 @@ Adventures of the Rogue Mage is a Web RPG game in which you play as a mage that 
 - [Gods](#gods)
 - [Item ID Table](#itemidtable)
 - [Magic](#magic)
+- [Mods](#mods)
 - [Player](#player)
 - [World](#world)
 ___
@@ -84,7 +85,7 @@ ___
 ## Details
 These commands are for people that wish to edit in-game values using the dev-console in the browser. If you have no experience with javascript, I would not suggest you use this as it can mess with the code of the game. Here is a list of commands for you to use in the console if you wish.
 > ### Dev Note
-> Despite being a game developer, I dont mind people modding my game, as long as it doesnt affect other people. If this game were ever to become an online game, then I would be against console commands. However since it is offline, the only thing you can edit is your own game. So I decided to give you a table of commands for you to do this so that you wouldn't waste time reading the source code.
+> Despite being a game developer, I dont mind people modding/cheating in my game, as long as it doesnt affect other people. If this game were ever to become an online game, then I would be against console commands. However since it is offline, the only thing you can edit is your own game. So I decided to give you a table of commands for you to do this so that you wouldn't waste time reading the source code.
 ## Table of Commands
 | Command | Description |
 | --- | --- |
@@ -95,3 +96,7 @@ These commands are for people that wish to edit in-game values using the dev-con
 | Item ID | Item |
 | --- | --- |
 | #A001 | Basic Helm |
+
+# Mods
+## Details
+If you wish, you can make a fork of this repo and edit the game to your liking. If you think it would be nice to add it into the base game, contact me and I'll try your mod and if I think it could work in the base game, I might implement it and give credit to the addition (The part about me crediting you is up to you).
