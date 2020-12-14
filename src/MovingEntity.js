@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 class MovingEntity extends Entity {
     
@@ -10,20 +10,23 @@ class MovingEntity extends Entity {
         this.frictionModifier = 0.8;
         this.dx = 0;
         this.dy = 0;
+        this.airborne = false;
     }
     
     
     
-    gravity = () => {
-        this.dy += this.gravityModifier;
+    gravity() {
+        if(this.airborne){
+            this.dy += this.gravityModifier;
+        }
     }
-    friction = () => {
-        this.dx * this.frictionModifier;
+    friction() {
+        this.dx *= this.frictionModifier;
     }
 
     draw() {
         //change to sprites in future
-        this.ctx.fillStyle = "lime";
+        this.ctx.fillStyle = "green";
         this.ctx.fillRect(this.x, this.y, this.width, this.height)
     }
 
