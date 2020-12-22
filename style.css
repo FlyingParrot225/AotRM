@@ -1,0 +1,216 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100vh;
+    position: fixed;
+}
+
+.background {
+    position: fixed;
+    background-color: rgb(26, 77, 91);
+    width: 100vw;
+    height: 100vh;
+    z-index: -1000;
+}
+
+nav {
+    width: 100vw;
+    height: 60px;
+    background-color: rgb(6, 57, 71);
+    position: sticky;
+    top: 0;
+    border-radius: 0, 0, 10px, 10px;
+    font-family: 'Nova Flat', cursive;
+    z-index: 100;
+}
+
+nav h1 {
+    margin: 0;
+    padding: 0;
+    float: left;
+    padding-left: 10px;
+    padding-right: 20px;
+    color: rgb(146, 197, 211);
+    line-height: 60px;
+}
+
+.NavSel {
+    float: left;
+    
+    text-align: left;
+}
+
+.NavSel:hover {
+    background-color: rgb(0, 51, 65);
+}
+
+.NavSel a {
+    line-height: 60px;
+    text-decoration: none;
+    color: rgb(146, 197, 211);
+    padding: 20px 30px;
+}
+
+.dropdown {
+    position: absolute;
+    display: none;
+    background-color: rgb(6, 57, 71);
+    min-width: 100px;
+    text-align: left;
+    border-radius: 0 0 10px 10px;
+}
+
+.NavSel:hover .dropdown {
+    display: block;
+}
+
+.selection {
+    border-radius: 10px;
+    padding: 5px 20px;
+}
+
+.selection:hover {
+    background-color:  rgb(0, 51, 65);
+}
+
+main {
+    background-color: rgb(26, 77, 91);
+    height: 100%;
+    color: white;
+    font-family: 'JetBrains Mono', monospace;
+    z-index: 1;
+    overflow-y: scroll;
+    padding: 5px;
+}
+
+.Transform3d {
+    transform: perspective(500px);
+}
+
+.RightRotate {
+    float: left;
+    margin: 30px 30px;
+    background-color: rgb(16, 67, 81);
+    transform: rotate3d(0.1, -0.5, -0.06, 50deg);
+    z-index: -2;
+    width: 500px;
+    padding: 5px;
+    height: 300px;
+    box-shadow: -10px 10px 25px black;
+    border-left: 30px solid rgb(6, 57, 71);
+    border-bottom: 10px solid rgb(0, 51, 65);
+}
+
+.LeftRotate {
+    float: right;
+    margin: 30px 30px;
+    background-color: rgb(16, 67, 81);
+    transform: rotate3d(0.1, 0.5, 0.06, 50deg);
+    z-index: -2;
+    width: 500px;
+    padding: 5px;
+    height: 300px;
+    box-shadow: 10px 10px 25px black;
+    border-right: 30px solid rgb(6, 57, 71);
+    border-bottom: 10px solid rgb(0, 51, 65);
+}
+
+.HiddenRotateL {
+    float: left;
+    margin: 100px 30px;
+    background-color: rgb(26, 77, 91);
+    transform: rotate3d(0.1, 0.5, 0.06, 50deg);
+    z-index: -2;
+    width: 500px;
+    padding: 5px;
+    height: 20px;
+}
+
+.HiddenRotateR {
+    float: right;
+    margin: 100px 30px;
+    background-color: rgb(26, 77, 91);
+    transform: rotate3d(0.1, -0.5, 0.06, 50deg);
+    z-index: -2;
+    width: 500px;
+    padding: 5px;
+    height: 20px;
+}
+
+footer {
+    color: white;
+    font-family: 'JetBrains Mono', monospace;
+    background-color: rgb(6, 57, 71);
+    height: fit-content;
+    width: 100%;
+    bottom: 0;
+    position: sticky;
+}
+footer #container {
+    margin: 5px;
+}
+footer p {
+    text-align: right;
+}
+
+/*Game*/
+.Menu {
+    position: absolute;
+    display: none;
+    background-color: black;
+    color: red;
+    width:100vw;
+    height: 100vh;
+}
+.MenuMargins {
+    padding-left: 30px;
+    padding-top: 35px;
+}
+.Menu h1 {
+    font-family: 'Pirata One';
+}
+.Menu h3 {
+    padding: 0 0;
+    margin: 0 0;
+}
+.Menu h3 p {
+    color: red;
+    margin-left: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.Menu h3 a {
+    color: red;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    padding-left: 5px;
+    padding-right: 5px;
+    transition: padding-left 0.5s;
+}
+.Menu h3 a:hover {
+    padding-left: 20px;
+    padding-right: 100px;
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.507), black);
+    text-shadow: 2px 2px 2px black;
+}
+.Menu h1 {
+    margin: 0; /*To get rid of the white line at the top of the page*/
+}
+#MainMenu {
+    display: block;
+}
+canvas {
+    z-index: -1;
+    width:100vw;
+    height: 100vh;
+}
+img {
+    display: none;
+}
