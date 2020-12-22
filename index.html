@@ -15,171 +15,123 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nova+Flat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <h1>FlyingParrot225</h1>
-        <div class="NavSel">
-            <a href="https://flyingparrot225.github.io">Home</a>
+    <div class="Menu" id="MainMenu">
+        <!--Main Menu-->
+        <div class="MenuMargins">
+            <h1>Foretold Quest of the Adventurer</h1>
+            <br/>
+            <br/>
+            <br/>
+            <h3><a href="#" onclick="Main.engine.newGame()">New Game</a></h3>
+            <br/>
+            <h3><a href="#">Load</a></h3>
+            <br/>
+            <h3><a href="#" onclick="Main.engine.deleteSave()">Delete Save</a></h3>
+            <br/>
+            <h3><a href="#" onclick="Main.engine.openSettings()">Settings</a></h3>
+            <br/>
+            <h3><a href="#" onclick="Main.engine.openCreditsMenu()">Credits</a></h3>
         </div>
-        <div class="NavSel">
-            <a href="#">Programming</a>
-            <div class="dropdown">
-                <div class="selection">
-                    <a href="https://flyingparrot225.github.io/Why_You_Should_Code/">What is Programming and Why You Should Know It?</a>
-                </div>
-            </div>
+    </div>
+    <div class="Menu" id="Settings">
+        <!--Settings-->
+        <div class="MenuMargins">
+            <h1>Settings</h1>
+            <br/>
+            <br/>
+            <br/>
+            <h3><a href="#" onclick="Main.engine.openAudio()">Audio</a></h3>
+            <br/>
+            <h3><a href="#" onclick="Main.engine.openControls()">Controls</a></h3>
+            <br/>
+            <h3><a href="#" onclick="Main.engine.exitSettings()">Back</a></h3>
+            <br/>
         </div>
-        <div class="NavSel">
-            <a href="#">Games</a>
-            <div class="dropdown">
-                <div class="selection">
-                    <a href="https://flyingparrot225.github.io/AotRM">AotRM [W.I.P]</a>
-                </div>
-                <div class="selection">
-                    <a href="https://flyingparrot225.github.io/TowerDefense">Tower Defense [W.I.P]</a>
-                </div>
-            </div>
+    </div>
+    <div class="Menu" id="Controls">
+        <!--Controls-->
+        <div class="MenuMargins">
+            <h1>Controls</h1>
+            <br/>
+            <br/>
+            <br/>
+            <h3><p>WASD: Movement</p></h3>
+            <br/>
+            <h3><p>E: Inventory</p></h3>
+            <br/>
+            <h3><a href="#" onclick="Main.engine.exitControls()">Back</a></h3>
+            <br/>
         </div>
-        <div class="NavSel">
-            <a href="#">Websites</a>
-            <div class="dropdown">
-                <div class="selection">
-                    <a target="_blank" href="https://github.com/FlyingParrot225">Github</a>
-                </div>
-                <div class="selection">
-                    <a href="#">Itch.io</a>
-                </div>
-            </div>
+    </div>
+    <div class="Menu" id="AudioMenu">
+        <!--Audio-->
+        <div class="MenuMargins">
+            <h1>Audio</h1>
+            <br/>
+            <br/>
+            <br/>
+            <h3><p>N/A</p></h3>
+            <br/>
+            <h3><p>N/A</p></h3>
+            <br/>
+            <h3><a href="#" onclick="Main.engine.exitAudio()">Back</a></h3>
+            <br/>
         </div>
-    </nav>
-    <div class="background"></div>
-    <main>
-        <div class="Menu" id="MainMenu">
-            <!--Main Menu-->
-            <div class="MenuMargins">
-                <h1>Foretold Quest of the Adventurer</h1>
-                <br/>
-                <br/>
-                <br/>
-                <h3><a href="#" onclick="Main.engine.newGame()">New Game</a></h3>
-                <br/>
-                <h3><a href="#">Load</a></h3>
-                <br/>
-                <h3><a href="#" onclick="Main.engine.deleteSave()">Delete Save</a></h3>
-                <br/>
-                <h3><a href="#" onclick="Main.engine.openSettings()">Settings</a></h3>
-                <br/>
-                <h3><a href="#" onclick="Main.engine.openCreditsMenu()">Credits</a></h3>
-            </div>
+    </div>
+    <div class="Menu" id="ClassSelection">
+        <!--Character Creation-->
+        <div class="MenuMargins">
+            <h1>Class Selection</h1>
+            <br/>
+            <br/>
+            <br/>
+            <h3><a href="#" onclick="Main.engine.setKnight()">Knight [Not Implemented]</a></h3>
+            <br/>
+            <h3><a href="#" onclick="Main.engine.setArcher()">Archer [Not Implemented]</a></h3>
+            <br/>
+            <h3><a href="#" onclick="Main.engine.setMage()">Mage [Not Implemented]</a></h3>
+            <br/>
+            <h3><p>Current Class: <span id="currentClass">None</span></p></h3>
+            <br/>
+            <h3><a href="#" onclick="Main.engine.start()">Next</a></h3>
+            <br/>
+            <h3><a href="#" onclick="Main.engine.openMainMenu()">Back</a></h3>
+            <br/>
         </div>
-        <div class="Menu" id="Settings">
-            <!--Settings-->
-            <div class="MenuMargins">
-                <h1>Settings</h1>
-                <br/>
-                <br/>
-                <br/>
-                <h3><a href="#" onclick="Main.engine.openAudio()">Audio</a></h3>
-                <br/>
-                <h3><a href="#" onclick="Main.engine.openControls()">Controls</a></h3>
-                <br/>
-                <h3><a href="#" onclick="Main.engine.exitSettings()">Back</a></h3>
-                <br/>
-            </div>
+    </div>
+    <div class="Menu" id="CreditsMenu">
+        <!--Main Menu-->
+        <div class="MenuMargins">
+            <h1>Credits</h1>
+            <br/>
+            <br/>
+            <br/>
+            <h3><p>Developed by: FlyingParrot225</p></h3>
+            <br/>
+            <h3><a href="#" onclick="Main.engine.openMainMenu()">Back</a></h3>
+            <br/>
         </div>
-        <div class="Menu" id="Controls">
-            <!--Controls-->
-            <div class="MenuMargins">
-                <h1>Controls</h1>
-                <br/>
-                <br/>
-                <br/>
-                <h3><p>WASD: Movement</p></h3>
-                <br/>
-                <h3><p>E: Inventory</p></h3>
-                <br/>
-                <h3><a href="#" onclick="Main.engine.exitControls()">Back</a></h3>
-                <br/>
-            </div>
-        </div>
-        <div class="Menu" id="AudioMenu">
-            <!--Audio-->
-            <div class="MenuMargins">
-                <h1>Audio</h1>
-                <br/>
-                <br/>
-                <br/>
-                <h3><p>N/A</p></h3>
-                <br/>
-                <h3><p>N/A</p></h3>
-                <br/>
-                <h3><a href="#" onclick="Main.engine.exitAudio()">Back</a></h3>
-                <br/>
-            </div>
-        </div>
-        <div class="Menu" id="ClassSelection">
-            <!--Character Creation-->
-            <div class="MenuMargins">
-                <h1>Class Selection</h1>
-                <br/>
-                <br/>
-                <br/>
-                <h3><a href="#" onclick="Main.engine.setKnight()">Knight [Not Implemented]</a></h3>
-                <br/>
-                <h3><a href="#" onclick="Main.engine.setArcher()">Archer [Not Implemented]</a></h3>
-                <br/>
-                <h3><a href="#" onclick="Main.engine.setMage()">Mage [Not Implemented]</a></h3>
-                <br/>
-                <h3><p>Current Class: <span id="currentClass">None</span></p></h3>
-                <br/>
-                <h3><a href="#" onclick="Main.engine.start()">Next</a></h3>
-                <br/>
-                <h3><a href="#" onclick="Main.engine.openMainMenu()">Back</a></h3>
-                <br/>
-            </div>
-        </div>
-        <div class="Menu" id="CreditsMenu">
-            <!--Main Menu-->
-            <div class="MenuMargins">
-                <h1>Credits</h1>
-                <br/>
-                <br/>
-                <br/>
-                <h3><p>Developed by: FlyingParrot225</p></h3>
-                <br/>
-                <h3><a href="#" onclick="Main.engine.openMainMenu()">Back</a></h3>
-                <br/>
-            </div>
-        </div>
-        <div id="inventory">
-            <!--inventory-->
-        </div>
-        <canvas></canvas>
-        <!--Backgrounds-->
-        <img id="plainsBG" src="assets/Background/plainsBG.png">
-        <!--Grounds-->
-        <img id="grass" src="assets/Ground/grass.png">
-        <!--Script-->
-        <script src="src/Terrain.js"></script>
-        <script src="src/TerrainManager.js"></script>
-        <script src="src/Item.js"></script>
-        <script src="src/Entity.js"></script>
-        <script src="src/MovingEntity.js"></script>
-        <script src="src/Player.js"></script>
-        <script src="src/Enemy.js"></script>
-        <script src="src/Engine.js"></script>
-        <script src="src/Main.js"></script>
-    </main>
-    <footer>
-        <div id="container">
-            <p>| The code of this website is open source on github |</p>
-        </div>
-    </footer>
-    <script src="script.js"></script>
+    </div>
+    <div id="inventory">
+        <!--inventory-->
+    </div>
+    <canvas></canvas>
+    <!--Backgrounds-->
+    <img id="plainsBG" src="assets/Background/plainsBG.png">
+    <!--Grounds-->
+    <img id="grass" src="assets/Ground/grass.png">
+    <!--Script-->
+    <script src="src/Terrain.js"></script>
+    <script src="src/TerrainManager.js"></script>
+    <script src="src/Item.js"></script>
+    <script src="src/Entity.js"></script>
+    <script src="src/MovingEntity.js"></script>
+    <script src="src/Player.js"></script>
+    <script src="src/Enemy.js"></script>
+    <script src="src/Engine.js"></script>
+    <script src="src/Main.js"></script>
 </body>
 </html>
